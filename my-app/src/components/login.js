@@ -1,6 +1,9 @@
 import '../App.css';
 import React, { useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
+import email from '../style/email.png'
+import lock from '../style/lock.png'
+
 
 function Login() {
   const navigate = useNavigate();
@@ -27,30 +30,33 @@ function Login() {
         localStorage.setItem('utilisateur', JSON.stringify(data.utilisateur));
         window.location.href = '/'
       } else {
-        setMessage(`Errot ${data.message}`)
+        setMessage(`${data.message}`)
       }
     } catch (err) {
       console.error('401:  ' + err);
-      setMessage('Erreur réseau');
+      setMessage('Network error');
     }
   };
 
   return (
-    <div className='centerized'>
-      <div className='signup'>
-        <h3>Welcome back</h3>
-        {message && <p>{message}</p>}
-        <form onSubmit={handleSubmit}>
-          <label htmlFor='email'>Email: </label>
-          <input type='email' id='email' className='email' name='email' value={mail} onChange={(e) => setEmail(e.target.value)} required /><br />
 
-          <label htmlFor='password'>Password: </label>
-          <input type='password' id='password' className='password' name='password' value={password} onChange={(e) => setPsw(e.target.value)} required /><br />
-          <button className='btnLog' onClick={()=>{window.location.href = '/'}}>Register</button><button className='btnReg' type='submit' >Login </button>
-        </form>
-      </div>
-      {/* <p style={{marginLeft: '50px'}}>If you do not have an account, please register </p> */}
+    <div className='signin'>
+      <h3>Welcome back</h3>
+      {message && <p style={{ color: 'red' }}>{message}</p>}
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor='email'><img src={email} className='loginIcon' /></label>
+          <input type='email' id='email' className='email' name='email' placeholder='Your email' onChange={(e) => setEmail(e.target.value)} required />
+        </div>
+        <div>
+          <label htmlFor='password'><img src={lock} className='loginIcon' /></label>
+          <input type='password' id='password' className='password' name='password' placeholder='Your password' onChange={(e) => setPsw(e.target.value)} required />
+        </div>
+        <p>Already have an account ?<a href='/register'>Register</a></p>
+        <button className='btnReg' type='submit' >Login </button>
+      </form>
     </div>
+
   );
 }
 

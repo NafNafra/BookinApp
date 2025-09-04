@@ -115,11 +115,12 @@ body {
 }
 
 .btnReg {
-  display: inline;
-  margin: 0 auto;
+
+  /* display: inline; */
+  margin: 0 25%;
   padding: 0px 0px;
   border: none;
-  border-radius: 30px 0px 30px 0px;
+  border-radius: 30px;
   font-size: 20px;
   font-weight: 600;
   background-color: #FEAE96;
@@ -149,16 +150,43 @@ body {
 }
 
 .signup {
-  padding: 10px 0px 0px;
-  /* text-align: center; */
-  /* border: 2px solid; */
+  padding: 0px;
   border-radius: 30px;
   margin: 0 auto;
   margin-top: 40px;
-  /* padding: 10px 20px 80px 20px; */
-  width: 450px;
-  height: auto;
+  width: 79%;
+  /* height: 100px; */
   background-color: #9bbbfc;
+}
+
+.signup form .imgDiv {
+  width: 250px;
+  height: auto;
+  /* max-height: 250px; */
+  background-color: #4741a6;
+  float: left;
+}
+
+.signup form .infoDiv {
+  width: 350px;
+  height: auto;
+  /* max-height: 250px; */
+  background-color: #9bbbfc;
+  float: right;
+}
+
+.signin {
+  padding: 10px 0px 0px;
+  position: fixed;
+  /* text-align: center; */
+  /* border: 2px solid; */
+  border-radius: 30px;
+  margin: 25%;
+  margin-top: 8%;
+  /* padding: 10px 20px 80px 20px; */
+  width: 350px;
+  height: auto;
+  background-color: rgb(153, 119, 198);
 }
 
 .modify {
@@ -173,26 +201,49 @@ body {
   height: auto;
   background-color: #9bbbfc;
 }
-.signup h3{
+
+.signup h3 {
   text-align: center;
+  margin: 10px 0px;
+  /* color: red; */
 }
-.modify h3{
+
+.signin h3 {
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.modify h3 {
   text-align: center;
 }
 
-.signup label {
+.signup label, 
+/* {
+  display: inline;
+  width: 100px;
+  position: fixed;
+  font-size: 18px;
+  color: #8a7c7c;
+  margin-left: 4px;
+  margin-top: 10px;
+  text-align: justify;
+  pointer-events: none;
+} */
+
+.signin label {
   display: inline;
   width: 100px;
   position: fixed;
   font-size: 18px;
   color: #8a7c7c;
   /* margin-top: 0%; */
-  margin-left: 70px;
+  margin-left: 4px;
   margin-top: 10px;
   text-align: justify;
   pointer-events: none;
   /* transition: .4s; */
 }
+
 .modify label {
   display: inline;
   width: 100px;
@@ -208,20 +259,113 @@ body {
   /* transition: .4s; */
 }
 
-.signup input {
-  width: 200px;
-  /* position: fixed; */
-
+.signup input, 
+/* {
+  position: fixed;
+  width: 190px;
   height: 22px;
-  margin: 0px 200px 10px;
+  margin: -8px 60px;
   padding: 9px;
+  font-size: 18px;
+  color: #555;
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-right: 0px solid transparent;
+  outline: none;
+  background-color: transparent; */
+/* } */
+
+.signin input {
+  position: fixed;
+  width: 190px;
+  height: 22px;
+  margin: -8px 60px;
+  padding: 9px;
+  font-size: 18px;
+  color: #555;
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-right: 0px solid transparent;
+  outline: none;
+  background-color: transparent;
+}
+
+
+.signin input:focus,
+.signin input:valid ,
+.signup input:focus,
+.signup input:valid {
+  position: fixed;
+  /* width: 160px; */
+  /* height: 22px; */
+  /* margin: -8px 100px; */
+  /* padding: 9px; */
+  font-size: 18px;
+  color: #555;
+  border-top: 0px solid transparent;
+  border-left: 0px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 2px solid #555;
+  outline: none;
+  background-color: transparent;
+}
+
+.signin div {
+  width: 280px;
+  /* position: fixed; */
+  height: 22px;
+  margin: 20px 6%;
+  padding: 15px;
   font-size: 18px;
   color: #555;
   border: #9BBBFC 0px solid;
   outline: none;
   border-radius: 5px;
-  background-color: #D9EFF7;
+  background-color: rgb(153, 119, 198);
+  /* #D9EFF7; */
 }
+
+.signup div {
+  width: 280px;
+  /* position: fixed; */
+  height: 22px;
+  margin: 20px 6%;
+  padding: 15px;
+  font-size: 18px;
+  color: #555;
+  border: #9BBBFC 0px solid;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(153, 119, 198);
+  /* #D9EFF7; */
+}
+
+.signin p {
+  font-size: medium;
+  text-align: center;
+}
+
+.signin p a {
+  font-size: medium;
+  text-align: center;
+  margin: 9px;
+}
+
+.signin .loginIcon {
+  margin-top: -9px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.signup .registIcon {
+  margin-top: -9px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
 .modify input {
   width: 200px;
   /* position: fixed; */
@@ -239,7 +383,7 @@ body {
   background-color: #D9EFF7;
 }
 
-.modify .img{
+.modify .img {
   padding-left: 50px;
   display: block;
   float: left;
@@ -248,19 +392,21 @@ body {
   margin: 0px 20px;
 }
 
-.modify .notImage{
+.modify .notImage {
   float: left;
   display: block;
   width: 250px;
   height: 330px;
 
 }
-.img img{
+
+.img img {
   border-radius: 20px;
 }
-.img input{
-    padding-left: 10px;
-    padding-bottom: 10px;
+
+.img input {
+  padding-left: 10px;
+  padding-bottom: 10px;
   display: block;
   /* float: left; */
   width: 180px;
@@ -268,21 +414,13 @@ body {
   margin: 0px 0px;
 }
 
-.modify .btnLog{
-  width: 50%
-}
-.modify .btnReg{
+.modify .btnLog {
   width: 50%
 }
 
-/* 
-.signup input:focus.label {
-  text-decoration: underline;
-  margin: -20%;
-  padding-left: 0px;
-  color: #8a7c7c;
-  font-weight: 500;
-} */
+.modify .btnReg {
+  width: 50%
+}
 
 
 
@@ -300,14 +438,14 @@ button {
   color: #4741A6;
 }
 
-.centerized {
+/* .centerized {
   position: relative;
   margin: 0 auto;
   margin-top: 80px;
   width: 350px;
   height: auto;
   text-align: center;
-}
+} */
 
 
 
@@ -696,6 +834,17 @@ main .roomInfo {
   right: 40px
 }
 
+.roomInfo .bookingDisplay img {
+  width: 46px;
+  height: 46px;
+  background-color: #4741A6;
+  border-radius: 50%;
+  border: 2px solid #5741aa;
+  /* position: absolute; */
+  /* top: 45%; */
+  right: -40px
+}
+
 .roomDescrip {
   /* margin: auto auto; */
   margin: 15px 0px;
@@ -754,7 +903,7 @@ main .roomInfo {
   border-radius: 40px;
 }
 
-.img1 .imageBlock{
+.img1 .imageBlock {
   margin: auto 9px;
 }
 
@@ -770,6 +919,7 @@ main .roomInfo {
   background-color: #f9ce69;
   cursor: pointer;
 }
+
 /* 
 .img1 div {
   display: inline;
@@ -868,8 +1018,8 @@ main .roomInfo {
 }
 
 .container button,
-.containerInfo button ,
-button.btnModify{
+.containerInfo button,
+button.btnModify {
   margin: 0px 5px;
   padding: 0px auto;
   border: none;
@@ -911,7 +1061,7 @@ button.btnModify{
 }
 
 
-.item1{
+.item1 {
   display: block;
   width: 99%;
   /* min-width: 6px; */
@@ -1106,14 +1256,14 @@ span.img img {
   padding: 0px auto;
 }
 
-.active-link{
+.active-link {
   text-decoration: none;
   font-size: medium;
   font-weight: 500;
   color: #5741aa;
 }
 
-.inactive-link{
+.inactive-link {
   text-decoration: none;
   font-size: medium;
   font-weight: 500;
@@ -1274,7 +1424,7 @@ nav .nav {
   border-bottom: 2px solid black;
 }
 
-.borderBottom{
+.borderBottom {
   border-bottom: 2px solid black;
 
 }
@@ -1355,10 +1505,11 @@ section .content {
 
 /*letter-spacing espace entre lettre*/
 
-.Details{
+.Details {
   height: 240px;
   display: block;
 }
+
 .info p {
   margin: 6px;
 }
@@ -1373,12 +1524,12 @@ section .content {
   text-align: left;
 }
 
-button.fav{
+button.fav {
   float: right;
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  margin-top: -280px ;
+  margin-top: -280px;
   margin-right: 10px;
   background-color: transparent;
 

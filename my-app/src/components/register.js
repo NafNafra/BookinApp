@@ -2,7 +2,11 @@ import '../App.css';
 import React, { useState } from "react";
 // import '../style/style.css';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios'
+import fullnameIcon from '../style/full_name.png'
+import emailIcon from '../style/email.png'
+import lockIcon from '../style/lock.png'
+import phoneIcon from '../style/phone.png'
+import retryIcon from '../style/retry.png'
 
 function Register() {
 	const navigate = useNavigate();
@@ -10,7 +14,6 @@ function Register() {
 	const [full_name, setName] = useState("");
 	const [photo, setPhoto] = useState("");
 	const [email, setMail] = useState("");
-	const [cin, setCin] = useState("");
 	const [phone, setPhone] = useState("");
 	const [password, setPassword] = useState('')
 	const [confirmPsw, setConfPsw] = useState('')
@@ -28,7 +31,6 @@ function Register() {
 		const formData = {
 			name: full_name,
 			email: email,
-			cin: cin,
 			phone: phone,
 			photo: uploadedUrl,
 			mot_de_passe: password
@@ -93,8 +95,8 @@ function Register() {
 		<div className='signup'>
 			<h3>Welcome</h3>
 			<form onSubmit={handleSubmit}>
-				<div>
-					<h2>Uploader une image</h2>
+				<div className='imgDiv'>
+					<h4>Uploader une image</h4>
 					<input type="file" onChange={handleFileChange} />
 					<button onClick={handleUpload}>Uploader</button>
 
@@ -105,34 +107,33 @@ function Register() {
 						</div>
 					)}
 				</div>
-				<div>
-
-					<label htmlFor='full_name'>Full name: </label>
-					<input type='text' id='full_name' className='full_name' name='full_name' value={full_name} onChange={(e) => setName(e.target.value)} required /><br />
-
-					{/* <label htmlFor='lastname'>Lastame: </label>
-				<input type='text' id='lastname' className='lastname' name='lastname' value={lastname} onChange={(e) => setLastname(e.target.value)} required /><br /> */}
-
-					<label htmlFor='email'>Email: </label>
-					<input type='email' id='email' className='email' name='email' value={email} onChange={(e) => setMail(e.target.value)} required /><br />
-
-					<label htmlFor='cin'>CIN: </label>
-					<input type='text' id='cin' className='cin' name='cin' value={cin} onChange={(e) => setCin(e.target.value)} required /><br />
-
-					<label htmlFor='phone'>Phone: </label>
-					<input type='number' id='phone' className='phone' name='phone' value={phone} onChange={(e) => setPhone(e.target.value)} required /><br />
-
-					<label htmlFor='password'>Password: </label>
-					<input type='password' id='password' className='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} required /><br />
-					<label htmlFor='retry'>Reenter : </label>
-					<input type='password' id='retry' className='retry' name='retry' value={confirmPsw} onChange={(e) => setConfPsw(e.target.value)} style={{ borderColor: confirmPsw && !pswMatch ? 'red' : '', borderWidth: '2px' }} required />
-					{confirmPsw && !pswMatch && (
-						<span style={{
-							color: 'red'
-						}}>❌</span>
-					)}<br />
-
-					<button className='btnLog' onClick={() => navigate("/login")}>Logon</button><button className='btnReg' type='submit'>Register</button>
+				<div className='infoDiv'>
+					<div>
+						<label htmlFor='full_name'><img className='registIcon' src={fullnameIcon} /></label>
+						<input type='text' id='full_name' className='full_name' name='full_name' value={full_name} onChange={(e) => setName(e.target.value)} required />
+					</div>
+					<div>
+						<label htmlFor='email'><img className='registIcon' src={emailIcon} /></label>
+						<input type='email' id='email' className='email' name='email' value={email} onChange={(e) => setMail(e.target.value)} required /><br />
+					</div>
+					<div>
+						<label htmlFor='phone'><img className='registIcon' src={phoneIcon} /></label>
+						<input type='number' id='phone' className='phone' name='phone' value={phone} onChange={(e) => setPhone(e.target.value)} required /><br />
+					</div>
+					<div>
+						<label htmlFor='password'><img className='registIcon' src={lockIcon} /></label>
+						<input type='password' id='password' className='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} required /><br />
+					</div>
+					<div>
+						<label htmlFor='retry'><img className='registIcon' src={retryIcon} /></label>
+						<input type='password' id='retry' className='retry' name='retry' value={confirmPsw} onChange={(e) => setConfPsw(e.target.value)} style={{ borderColor: confirmPsw && !pswMatch ? 'red' : '', borderWidth: '2px' }} required />
+						{confirmPsw && !pswMatch && (
+							<span style={{
+								color: 'red'
+							}}>❌</span>
+						)}
+					</div>
+					<button className='btnReg' type='submit'>Register</button>
 
 				</div>
 			</form>

@@ -7,6 +7,7 @@ import logo2 from '../style/logo2.jpg';
 import { useParams, useNavigate } from 'react-router-dom';
 import tofav from '../style/tofav.png'
 import { useAuth } from '../service/AuthContext';
+import book_the_room from '../style/book_the_room.jpeg'
 
 
 
@@ -109,7 +110,7 @@ function Booking() {
             </div>
           </span>
         </div>
-        <div className='bookingDisplay' onClick={() => navigate('/bookit/' + [selectedDispo.id])}></div>
+        <div className='bookingDisplay' onClick={() => navigate('/bookit/' + [selectedDispo.id])}><img src={book_the_room}/></div>
         <div className='roomDisplay'>
           <h4>Room disposition and prices</h4>
           <div className='dispositions'>
@@ -117,10 +118,10 @@ function Booking() {
               <div key={dispo.id} className='dispo' onClick={() => setSelectedDispo(dispo)}></div>
             ))}
             <div>
-              <p>ID : <em className='dispoEm'> {selectedDispo ? [selectedDispo.id] : ""}</em></p>
-              <p>Disposition : <em className='dispoEm'> {selectedDispo ? [selectedDispo.disposition] : ""}</em></p>
-              <p>Place number: <em className='placeEm'> {selectedDispo ? [selectedDispo.capacity] : ""} </em></p>
-              <p>Hourly price: <em className='priceEm'> {selectedDispo ? [selectedDispo.price] : ""}</em></p>
+              {/* <p>ID : <em className='dispoEm'> {selectedDispo ? [selectedDispo.id] : ""}</em></p> */}
+              <p>Disposition : <em className='dispoEm'> {selectedDispo ? "en " +  [selectedDispo.disposition] : ""}</em></p>
+              <p>Place number: <em className='placeEm'> {selectedDispo ? [selectedDispo.capacity] +" persons" : ""} </em></p>
+              <p>Hourly price: <em className='priceEm'> {selectedDispo ? [selectedDispo.price] + " €/h" : ""}</em></p>
             </div>
           </div>
         </div>

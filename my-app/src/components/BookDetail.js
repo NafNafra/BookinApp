@@ -357,8 +357,6 @@ function Booking_page() {
         <div className='bookingHourSection'>
           <h4>Hours selection</h4>
           <div className='item1'>
-
-            {/* const dateKey = d.toLocaleDateString("fr-CA") //d.toISOString().split("T")[0]; */}
             <div className='container1'>
               <div>
                 <strong style={{ fontSize: 'x-large' }}>Date : </strong>
@@ -371,59 +369,13 @@ function Booking_page() {
                 <span>
                   <label>End</label>
                   <input type='time' style={{ width: '130px' }} value={topMg.end_time} /> </span>
-                {/* <input type='time'  style={{ width: '130px' }} /> */}
               </div>
               <div className='bookingBtn'>
-                {/* {topMg.status === "reserved" ? (
-                  <>
-                    <button onClick={() => handleUse(topMg.id, "in_use")}><img src={bookit} className='icons' alt='Book it' /><b >Use </b></button>
-
-                    <button onClick={() => handleDetails(topMg.id_booking)}><img src={verify} className='icons' alt='Verify' /><b>Details</b></button>
-                    <button onClick={() => handleModify(topMg.id_booking)}><img src={bookit} className='icons' alt='Book it' /><b>Modify </b></button>
-
-                    <button onClick={() => handleUse(topMg.id, "canceled")}><img src={search} className='icons' alt='Search' /><b>Cancel </b></button>
-                  </>
-                ) : (
-                  null
-                )}
-                {topMg.status === "in_use" ? (
-                  <>
-                    <button onClick={() => handleUse(topMg.id, "completed")}><img src={bookit} className='icons' alt='Book it' /><b>Finish</b></button>
-
-                    <button onClick={() => handleDetails(topMg.id_booking)}><img src={verify} className='icons' alt='details' /><b>Details</b></button>
-                  </>
-                ) : (
-                  null
-                )}
-                {topMg.status === "completed" || topMg.status === "canceled" ? (
-                  <>
-                    <button onClick={() => handleDetails(topMg.id_booking)}><img src={verify} className='icons' alt='Verify' /><b>Details</b></button>
-                  </>
-                ) : (
-                  null
-                )} */}
-                {/* {isValidTime(dateKey) ? ( */}
-                {/* hours[dateKey].reserved ? ( */}
-                {/* <p><strong>Fini ✅</strong></p> */}
-                {/* ) : ( */}
-                <>
-                  {/* <button><img src={verify} className='icons' alt='Verify' onClick={() => handleVerify(dateKey)} />Verify</button> */}
-                  {/* <button><img src={bookit} className='icons' alt='Book it' onClick={() => handleReserve(dateKey)} />Book it</button> */}
-                </>
-                {/* ) */}
-                {/* ) : ( */}
-                <>
-                  {/* <button>Choose valide hours</button> */}
-                </>
-                {/* )} */}
+                
               </div>
             </div>
-
-
-
           </div>
         </div>
-        {/* <div> <button type='submit' onClick={handleBooking}>Reserver</button>  </div> */}
       </div>
     </>
   );
