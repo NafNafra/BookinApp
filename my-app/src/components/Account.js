@@ -4,6 +4,12 @@ import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import { useEffect } from 'react';
+import fullnameIcon from '../style/full_name.png'
+import emailIcon from '../style/email.png'
+import lockIcon from '../style/lock.png'
+import phoneIcon from '../style/phone.png'
+import retryIcon from '../style/retry.png'
+import uploadImg from '../style/uploadImg.png'
 
 function Register() {
 
@@ -63,7 +69,7 @@ function Register() {
 
   // Sauvegarder
   const handleSave = async (e) => {
-    alert(form.photo+"et "+ form.full_name , form.email, form.cin, form.phone)
+    alert(form.photo + "et " + form.full_name, form.email, form.cin, form.phone)
     const res = await fetch(`http://localhost:5000/api/modify/${userId}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -85,70 +91,59 @@ function Register() {
 
       {!isEditing ? (
         <div>
-          <div>
-            <div className='img'>
-              {/* <p>Image enregistrée :</p> */}
-              <img src={user[0].photo} alt="upload preview" width="200" />
-            </div>
-            <div className='notImage'>
-              <label htmlFor='full_name'>Full name: </label>
-              <input type='text' id='full_name' className='full_name' name='full_name' value={user[0].full_name} /><br />
-
-
-              <label htmlFor='email'>Email: </label>
-              <input type='email' id='email' className='email' name='email' value={user[0].email} /><br />
-
-              <label htmlFor='cin'>CIN: </label>
-              <input type='text' id='cin' className='cin' name='cin' value={user[0].cin} /><br />
-
-              <label htmlFor='phone'>Phone: </label>
-              <input type='number' id='phone' className='phone' name='phone' value={user[0].phone} required /><br />
-
-            </div>
+          <div className='img'>
+            {/* <p>Image enregistrée :</p> */}
+            <img src={fullnameIcon} alt={user[0].photo} width="200" />
           </div>
-          <div>
-            <button className='btnLog' onClick={() => navigate("/")}>Quit</button>
+
+          <div className='notImage'>
+            <div>
+              <label htmlFor='full_name'><img className='registIcon' src={fullnameIcon} /></label>
+              <input type='text' id='full_name' className='full_name' name='full_name' value={user[0].full_name} />
+            </div>
+            <div>
+              <label htmlFor='email'><img className='registIcon' src={emailIcon} /></label>
+              <input type='email' id='email' className='email' name='email' value={user[0].email} />
+            </div>
+            <div>
+              <label htmlFor='phone'><img className='registIcon' src={phoneIcon} /></label>
+              <input type='number' id='phone' className='phone' name='phone' value={user[0].phone} required />
+            </div>
             <button className='btnReg' onClick={() => setIsEditing(true)}>Modifier</button>
           </div>
-        </div>
+        </div >
 
 
       ) : (
         <div>
-          <div style={{ display: 'block' }}>
-            <div className='img'>
-              {form.photo ? (
-                <img src={form.photo} alt="upload preview" width="200" />
+          <div className='img'>
+            {form.photo ? (
+              <img src={form.photo} alt="upload previewing" width="200" />
 
-              ):(
-              <img src={user[0].photo} alt="upload preview" width="200" />
-              )}
-              {/* <img src={form.photo || user[0].photo} alt="upload preview" width="200" /> */}
-              <input type="file" onChange={handleImageUpload} />
-              {/* {form.photo && <img src={form.photo} alt="preview" width={100} />} */}
+            ) : (
+              <img src={fullnameIcon} alt="upload preview" width="200" />
+            )}
+            <input type="file" onChange={handleImageUpload} />
 
-            </div>
-            <div className='notImage'>
-              <label htmlFor='full_name'>Full name: </label>
-              <input type='text' id='full_name' className='full_name' name='full_name' value={form.full_name} onChange={form.full_name} required /><br />
-
-
-              <label htmlFor='email'>Email: </label>
-              <input type='email' id='email' className='email' name='email' value={form.email} onChange={form.email} required /><br />
-
-              <label htmlFor='cin'>CIN: </label>
-              <input type='text' id='cin' className='cin' name='cin' value={form.cin} onChange={form.cin} required /><br />
-
-              <label htmlFor='phone'>Phone: </label>
-              <input type='number' id='phone' className='phone' name='phone' value={form.phone} onChange={handleChange} required /><br />
-
-            </div>
           </div>
-          <div>
+          <div className='notImage'>
+            <div>
+              <label htmlFor='full_name'><img className='registIcon' src={fullnameIcon} /></label>
+              <input type='text' id='full_name' className='full_name' name='full_name' value={user[0].full_name} onChange={form.full_name} required />
+            </div>
+            <div>
+              <label htmlFor='email'><img className='registIcon' src={emailIcon} /></label>
+              <input type='email' id='email' className='email' name='email' value={user[0].email} onChange={form.email} required />
+            </div>
+            <div>
+              <label htmlFor='phone'><img className='registIcon' src={phoneIcon} /></label>
+              <input type='number' id='phone' className='phone' name='phone' value={user[0].phone} onChange={handleChange} required />
+            </div>
+            <button className='btnReg' onClick={() => setIsEditing(false)}>Cancel</button>
+            <button className='btnReg' onClick={() => handleSave()}>Modify</button>
 
-            <button className='btnLog' onClick={() => setIsEditing(false)}>Annuler</button>
-            <button className='btnReg' onClick={() => handleSave()}>Sauvegarder</button>
           </div>
+
         </div>
       )}
 

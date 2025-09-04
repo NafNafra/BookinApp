@@ -17,15 +17,6 @@ function App() {
 
       <span><h3>Innovation</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>High Quality</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>Top Services</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>Best Product</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span>
 
-
-      <a href='/person'>Icons</a><br />
-      <a href='/booking'>Booking_spanage</a><br />
-      <a href='/calendar'>Calendar</a><br />
-      <a href='/details'>Details</a><br />
-      <a href='/reactcalendar'>ReactCalendar</a><br />
-
-
-
     </>
   );
 }

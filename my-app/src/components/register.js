@@ -7,6 +7,7 @@ import emailIcon from '../style/email.png'
 import lockIcon from '../style/lock.png'
 import phoneIcon from '../style/phone.png'
 import retryIcon from '../style/retry.png'
+import uploadImg from '../style/uploadImg.png'
 
 function Register() {
 	const navigate = useNavigate();
@@ -82,8 +83,6 @@ function Register() {
 			const data = await res.json();
 			setUploadedUrl(data.url);
 
-			// 👉 ici tu envoies data.url à ton backend principal
-			// pour l'enregistrer dans la BDD (table `users.photo`)
 			console.log("Lien de l'image :", data.url);
 		} catch (err) {
 			console.error("Erreur upload :", err);
@@ -96,42 +95,44 @@ function Register() {
 			<h3>Welcome</h3>
 			<form onSubmit={handleSubmit}>
 				<div className='imgDiv'>
-					<h4>Uploader une image</h4>
-					<input type="file" onChange={handleFileChange} />
-					<button onClick={handleUpload}>Uploader</button>
-
-					{uploadedUrl && (
-						<div>
-							<p>Image enregistrée :</p>
-							<img src={uploadedUrl} alt="upload preview" width="200" />
-						</div>
+					<h4>Upload your image</h4>
+					{uploadedUrl ? (
+							<img src={uploadedUrl} alt="upload preview" />
+					) : (
+						<img src={uploadImg} alt="upload preview" />
 					)}
+					<input type="file" onChange={handleFileChange} />
+					<button onClick={handleUpload}>
+						<img className='registIcon' src={uploadImg} />
+					</button>
+
+
 				</div>
 				<div className='infoDiv'>
 					<div>
 						<label htmlFor='full_name'><img className='registIcon' src={fullnameIcon} /></label>
-						<input type='text' id='full_name' className='full_name' name='full_name' value={full_name} onChange={(e) => setName(e.target.value)} required />
+						<input type='text' id='full_name' className='full_name' name='full_name' placeholder='Your name' onChange={(e) => setName(e.target.value)} required />
 					</div>
 					<div>
 						<label htmlFor='email'><img className='registIcon' src={emailIcon} /></label>
-						<input type='email' id='email' className='email' name='email' value={email} onChange={(e) => setMail(e.target.value)} required /><br />
+						<input type='email' id='email' className='email' name='email' placeholder='Your email' onChange={(e) => setMail(e.target.value)} required /><br />
 					</div>
 					<div>
 						<label htmlFor='phone'><img className='registIcon' src={phoneIcon} /></label>
-						<input type='number' id='phone' className='phone' name='phone' value={phone} onChange={(e) => setPhone(e.target.value)} required /><br />
+						<input type='number' id='phone' className='phone' name='phone' placeholder='Your number' onChange={(e) => setPhone(e.target.value)} required /><br />
 					</div>
 					<div>
 						<label htmlFor='password'><img className='registIcon' src={lockIcon} /></label>
-						<input type='password' id='password' className='password' name='password' value={password} onChange={(e) => setPassword(e.target.value)} required /><br />
+						<input type='password' id='password' className='password' name='password' placeholder='Your password' onChange={(e) => setPassword(e.target.value)} required /><br />
 					</div>
 					<div>
 						<label htmlFor='retry'><img className='registIcon' src={retryIcon} /></label>
-						<input type='password' id='retry' className='retry' name='retry' value={confirmPsw} onChange={(e) => setConfPsw(e.target.value)} style={{ borderColor: confirmPsw && !pswMatch ? 'red' : '', borderWidth: '2px' }} required />
-						{confirmPsw && !pswMatch && (
+						<input type='password' id='retry' className='retry' name='retry' placeholder='Reenter the password' onChange={(e) => setConfPsw(e.target.value)} style={{ borderBottomColor: confirmPsw && !pswMatch ? 'red' : '', borderWidth: '2px' }} required />
+						{/* {confirmPsw && !pswMatch && (
 							<span style={{
 								color: 'red'
 							}}>❌</span>
-						)}
+						)} */}
 					</div>
 					<button className='btnReg' type='submit'>Register</button>
 

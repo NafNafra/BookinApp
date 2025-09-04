@@ -6,18 +6,7 @@ import mysql from 'mysql2'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import bodyParser from 'body-parser'
-
-
-// const express = require("express");
-// const cors = require("cors");
-// const mysql = require("mysql2");
-// const bcrypt = require('bcrypt');
-// const jwt = require('jsonwebtoken')
-// const bodyParser = require('body-parser')
-
 import mypromse from "mysql2/promise";
-
-
 
 const app = express();
 const PORT = 5000;

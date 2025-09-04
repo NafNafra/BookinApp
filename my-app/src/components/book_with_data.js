@@ -304,7 +304,7 @@ function Booking_page() {
           />
           <div>
             {selectedDates.length > 0 ? (
-              <p><strong>NB : </strong>{rid}. Curabitur iaculis torquent urna faucibus imperdiet commodo eu.</p>
+              <p><strong>NB : </strong> Curabitur iaculis torquent urna faucibus imperdiet commodo eu.</p>
             ) : (
               <p></p>
             )}

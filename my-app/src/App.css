@@ -117,7 +117,7 @@ body {
 .btnReg {
 
   /* display: inline; */
-  margin: 0 25%;
+  margin: 0%;
   padding: 0px 0px;
   border: none;
   border-radius: 30px;
@@ -153,25 +153,28 @@ body {
   padding: 0px;
   border-radius: 30px;
   margin: 0 auto;
-  margin-top: 40px;
-  width: 79%;
-  /* height: 100px; */
-  background-color: #9bbbfc;
+  margin-top: 20px;
+  width: 60%;
+  height: 460px;
+  padding: 10px;
+  background-color: rgb(153, 119, 198);
 }
 
 .signup form .imgDiv {
   width: 250px;
   height: auto;
+  margin: 0px;
   /* max-height: 250px; */
-  background-color: #4741a6;
+  background-color: transparent;
   float: left;
 }
 
 .signup form .infoDiv {
   width: 350px;
   height: auto;
+  margin: 25px 0px 0px;
   /* max-height: 250px; */
-  background-color: #9bbbfc;
+  background-color: transparent;
   float: right;
 }
 
@@ -191,21 +194,24 @@ body {
 
 .modify {
   padding: 10px 0px 0px;
-  /* text-align: center; */
-  /* border: 2px solid; */
+  position: fixed;
   border-radius: 30px;
-  margin: 0 auto;
-  margin-top: 40px;
-  /* padding: 10px 20px 80px 20px; */
-  width: 750px;
-  height: auto;
-  background-color: #9bbbfc;
+  margin: 40px 10%;
+  width: 640px;
+  height: 340px;
+  background-color: rgb(153, 119, 198);
 }
 
 .signup h3 {
+  position: fixed;
   text-align: center;
-  margin: 10px 0px;
-  /* color: red; */
+  margin: 10px 20%;
+}
+
+.signup h4 {
+  position: fixed;
+  text-align: center;
+  margin: 5% 35px;
 }
 
 .signin h3 {
@@ -215,21 +221,11 @@ body {
 
 .modify h3 {
   text-align: center;
+  position: fixed;
+  margin: 1% 20%;
 }
 
-.signup label, 
-/* {
-  display: inline;
-  width: 100px;
-  position: fixed;
-  font-size: 18px;
-  color: #8a7c7c;
-  margin-left: 4px;
-  margin-top: 10px;
-  text-align: justify;
-  pointer-events: none;
-} */
-
+.signup label,
 .signin label {
   display: inline;
   width: 100px;
@@ -250,22 +246,19 @@ body {
   position: fixed;
   font-size: 18px;
   color: #8a7c7c;
-  /* margin-top: 0%; */
-  margin-left: 70px;
-  margin-top: 30px;
-  margin-bottom: 90px;
+  margin-left: 4px;
+  margin-top: 10px;
   text-align: justify;
   pointer-events: none;
   /* transition: .4s; */
 }
 
-.signup input, 
-/* {
+.signup form .imgDiv input {
   position: fixed;
-  width: 190px;
+  width: 238px;
   height: 22px;
-  margin: -8px 60px;
-  padding: 9px;
+  margin: 22% auto;
+  padding: 15px 0px;
   font-size: 18px;
   color: #555;
   border-top: 0px solid transparent;
@@ -273,10 +266,54 @@ body {
   border-right: 0px solid transparent;
   border-right: 0px solid transparent;
   outline: none;
-  background-color: transparent; */
-/* } */
+  background-color: transparent;
+}
 
-.signin input {
+
+.signup form .imgDiv button {
+  margin: 17% 16%;
+  position: fixed;
+  /* width: 20px;
+  height: 20px; */
+  background-color: transparent;
+}
+
+.signup form .imgDiv button img {
+  margin: 4.5% -2%;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+.signup form .imgDiv img {
+  margin: 8% 1%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  background-color: transparent;
+}
+
+
+.signup .btnReg {
+  position: fixed;
+  margin: 0 8%;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #FEAE96;
+  /* outline: #F6E8EF 2px; */
+  cursor: pointer;
+  color: #EEEEEE;
+  width: 150px;
+  height: 45px;
+}
+
+.signup .infoDiv input,
+.signin input,
+.modify input {
   position: fixed;
   width: 190px;
   height: 22px;
@@ -294,7 +331,7 @@ body {
 
 
 .signin input:focus,
-.signin input:valid ,
+.signin input:valid,
 .signup input:focus,
 .signup input:valid {
   position: fixed;
@@ -359,20 +396,24 @@ body {
   height: 40px;
   border-radius: 50%;
 }
+
 .signup .registIcon {
-  margin-top: -9px;
+  margin-top: -20px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.modify input {
-  width: 200px;
-  /* position: fixed; */
-  /* position: fixed; */
+.modify .registIcon {
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
 
+/* .modify input {
+  width: 200px;
   height: 22px;
-  /* margin-top: 50px; */
   margin: 20px 200px 0px;
   padding: 9px;
   font-size: 18px;
@@ -381,27 +422,53 @@ body {
   outline: none;
   border-radius: 5px;
   background-color: #D9EFF7;
-}
+} */
 
 .modify .img {
-  padding-left: 50px;
+  padding-left: 10px;
   display: block;
-  float: left;
+  position: fixed;
+  /* float: left; */
   width: 200px;
   height: 330px;
-  margin: 0px 20px;
+  margin: 57px 2%;
+}
+
+.modify .img img {
+  margin: 20px 0;
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
 }
 
 .modify .notImage {
-  float: left;
+  /* float: left; */
+  position: fixed;
+  margin: 60px 20%;
   display: block;
   width: 250px;
   height: 330px;
 
 }
 
+.modify .notImage div {
+  width: 280px;
+  /* position: fixed; */
+  height: 22px;
+  margin: 20px 6%;
+  padding: 15px;
+  font-size: 18px;
+  color: #555;
+  border: #9BBBFC 0px solid;
+  outline: none;
+  border-radius: 5px;
+  background-color: rgb(153, 119, 198);
+  /* #D9EFF7; */
+}
+
+
 .img img {
-  border-radius: 20px;
+  border-radius: 50%;
 }
 
 .img input {
@@ -419,7 +486,8 @@ body {
 }
 
 .modify .btnReg {
-  width: 50%
+  width: 50%;
+  /* margin-right: 20px; */
 }
 
 
@@ -438,27 +506,9 @@ button {
   color: #4741A6;
 }
 
-/* .centerized {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 80px;
-  width: 350px;
-  height: auto;
-  text-align: center;
-} */
-
-
-
-
-
-
-
-/* h2{
-  padding: 0px 10px 0px 50px;
-} */
+/* 
 
 button {
-  /* display: ; */
   margin: 0 5px;
   padding: 0px 20px;
   border: none;
@@ -470,7 +520,7 @@ button {
   color: #4741A6;
   width: 90px;
   height: 33px;
-}
+} */
 
 strong {
   /* margin-right: 50px; */
@@ -478,10 +528,6 @@ strong {
   font-size: medium;
   /* background-color: #FEAE96; */
 }
-
-
-
-/*  */
 
 .carte {
   display: flex;
@@ -1053,25 +1099,36 @@ button.btnModify {
 .item {
   display: block;
   width: 95%;
-  /* min-width: 6px; */
-  height: 450px;
-  border: 1px solid black;
+  margin-top: 35px;
+  height: auto;
+  border: 2px solid #555;
   overflow: auto;
   border-radius: 20px;
+  max-height: 410px;
 }
 
+.item p {
+  margin: 20px;
+  text-align: justify;
+}
 
 .item1 {
   display: block;
   width: 99%;
   /* min-width: 6px; */
   height: auto;
-  border: 1px solid black;
+  border: 1px solid #555;
   overflow: auto;
   border-radius: 20px;
   padding: 20px 20px;
   margin: 0px auto;
 }
+
+.item1 p {
+  margin: 20px;
+  text-align: justify;
+}
+
 
 .bookInfo {
   display: block;
