@@ -9,7 +9,7 @@
   align-items: center;
   flex-direction: column;
   border-radius: 1em;
-  padding: .5em;
+  padding: 2em .5em;
   width: auto;
 
   .side {
@@ -126,6 +126,7 @@
 
   .panel {
     width: 100%;
+
     .login {
       display: flex;
       justify-content: space-evenly;
@@ -152,14 +153,14 @@
             background-image: url('../../assets/icon/whatsapp-svgrepo-com.svg');
           }
 
-          &:hover{
-            &~.name{
+          &:hover {
+            &~.name {
               display: flex;
             }
           }
         }
 
-        .name{
+        .name {
           font-size: .8em;
           font-weight: 500;
           display: none;
