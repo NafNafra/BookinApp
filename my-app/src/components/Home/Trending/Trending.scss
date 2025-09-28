@@ -45,24 +45,31 @@
         align-content: center;
 
         .description {
-          h3 {
-            margin: 0;
-            line-height: 1.2em;
-          }
+          display: flex;
+          flex-direction: column;
+          gap: .5em;
+          div {
 
-          &>div {
-            display: flex;
-            flex-direction: row;
-            gap: .5em;
-
-            .lieu-icon {
-              width: 1em;
-              height: 1em;
-              background-image: url('../../../assets/icon/hotel-1-svgrepo-com.svg');
-              background-position: center;
-              background-size: contain;
+            h3 {
+              margin: 0;
+              padding: .5em 0;
+              line-height: 1.2em;
             }
 
+            &>div {
+              display: flex;
+              flex-direction: row;
+              gap: .5em;
+
+              .lieu-icon {
+                width: 1em;
+                height: 1em;
+                background-image: url('../../../assets/icon/hotel-1-svgrepo-com.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
 
             .reduc {
               font-size: 1.5em;
@@ -73,7 +80,15 @@
               font-size: 1em;
               font-weight: 400;
             }
+
+            .inclus {
+              font-size: .8em;
+            }
+
           }
+
+
+
 
 
 

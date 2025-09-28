@@ -12,14 +12,34 @@ const Trending = () => {
           <div className="lieux-image"></div>
           <div className="titre">
             <div className='description'>
-              <h3>Montmartre Majesty Hotel</h3>
-              <div><div className="lieu-icon" /><div className="valabilite">Marseille</div></div>
-              <div><div className="lieu-icon" /><div className="valabilite">4.7 (2,578 Reviews)</div></div>
               <div>
-                <span className="reduc">$160</span>
-                <span className="normal">$250</span>
+                <h3>Montmartre Majesty Hotel</h3>
+                <div><div className="lieu-icon" /><div className="valabilite">Marseille</div></div>
+                <div><div className="lieu-icon" /><div className="valabilite">4.7 (2,578 Reviews)</div></div>
               </div>
-              <div className='inclus'>Taxes et frais inclus</div>
+              <div>
+                <span className="reduc">$160  </span>
+                <span className="normal">$250</span>
+                <div className='inclus'>Taxes et frais inclus</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+<div className="carte">
+          <div className="lieux-image"></div>
+          <div className="titre">
+            <div className='description'>
+              <div>
+                <h3>Montmartre Majesty Hotel</h3>
+                <div><div className="lieu-icon" /><div className="valabilite">Marseille</div></div>
+                <div><div className="lieu-icon" /><div className="valabilite">4.7 (2,578 Reviews)</div></div>
+              </div>
+              <div>
+                <span className="reduc">$160  </span>
+                <span className="normal">$250</span>
+                <div className='inclus'>Taxes et frais inclus</div>
+              </div>
 
             </div>
           </div>
@@ -28,14 +48,16 @@ const Trending = () => {
           <div className="lieux-image"></div>
           <div className="titre">
             <div className='description'>
-              <h3>Montmartre Majesty Hotel</h3>
-              <div><div className="lieu-icon" /><div className="valabilite">Marseille</div></div>
-              <div><div className="lieu-icon" /><div className="valabilite">4.7 (2,578 Reviews)</div></div>
               <div>
-                <span className="reduc">$160</span>
-                <span className="normal">$250</span>
+                <h3>Montmartre Majesty Hotel</h3>
+                <div><div className="lieu-icon" /><div className="valabilite">Marseille</div></div>
+                <div><div className="lieu-icon" /><div className="valabilite">4.7 (2,578 Reviews)</div></div>
               </div>
-              <div className='inclus'>Taxes et frais inclus</div>
+              <div>
+                <span className="reduc">$160  </span>
+                <span className="normal">$250</span>
+                <div className='inclus'>Taxes et frais inclus</div>
+              </div>
 
             </div>
           </div>
@@ -44,36 +66,20 @@ const Trending = () => {
           <div className="lieux-image"></div>
           <div className="titre">
             <div className='description'>
-              <h3>Montmartre Majesty Hotel</h3>
-              <div><div className="lieu-icon" /><div className="valabilite">Marseille</div></div>
-              <div><div className="lieu-icon" /><div className="valabilite">4.7 (2,578 Reviews)</div></div>
               <div>
-                <span className="reduc">$160</span>
-                <span className="normal">$250</span>
+                <h3>Montmartre Majesty Hotel</h3>
+                <div><div className="lieu-icon" /><div className="valabilite">Marseille</div></div>
+                <div><div className="lieu-icon" /><div className="valabilite">4.7 (2,578 Reviews)</div></div>
               </div>
-              <div className='inclus'>Taxes et frais inclus</div>
+              <div>
+                <span className="reduc">$160  </span>
+                <span className="normal">$250</span>
+                <div className='inclus'>Taxes et frais inclus</div>
+              </div>
 
             </div>
           </div>
         </div>
-        <div className="carte">
-          <div className="lieux-image"></div>
-          <div className="titre">
-            <div className='description'>
-              <h3>Montmartre Majesty Hotel</h3>
-              <div><div className="lieu-icon" /><div className="valabilite">Marseille</div></div>
-              <div><div className="lieu-icon" /><div className="valabilite">4.7 (2,578 Reviews)</div></div>
-              <div>
-                <span className="reduc">$160</span>
-                <span className="normal">$250</span>
-              </div>
-              <div className='inclus'>Taxes et frais inclus</div>
-
-            </div>
-          </div>
-        </div>
-
-
       </div>
     </div>
   )
