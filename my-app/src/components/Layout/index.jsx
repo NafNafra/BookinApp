@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import './Layout.scss'
-import SidePanel from '../SidePanel';
+import Header from '../Header';
 
 export default function Layout() {
   return (
       <div className="layout">
-        <SidePanel />
+        <Header />
         <div>
           <Outlet />
         </div>
