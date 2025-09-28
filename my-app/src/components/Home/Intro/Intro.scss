@@ -1,0 +1,134 @@
+@import '../../../App.scss';
+
+.Intro {
+  display: flex;
+  justify-content: end;
+  align-content: end;
+  flex-direction: column;
+  gap: .5em;
+  margin: .5rem;
+  height: 90vh;
+  border-radius: .5em;
+  background-size: cover;
+  background-position: center;
+  animation: bgCycle 50s infinite;
+  padding: 1em;
+
+  h1.titre {
+    font-size: 2em;
+    color: $font-2;
+  }
+
+  .search {
+    padding: 1em;
+    background-color: $font-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 1.2em;
+    border-radius: .5em;
+
+    .search-bar {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 100%;
+
+      .bar {
+        width: calc(90% /3);
+        display: flex;
+        flex-direction: column;
+        gap: .5em;
+
+        .titre {
+          font-size: 1.2em;
+          font-weight: 500;
+        }
+
+        .input {
+          background-color: $thi-color;
+          display: flex;
+          align-items: center;
+          align-content: center;
+          gap:1em;
+          padding: .5em;
+          width: auto;
+          border: .1em solid $font-1;
+          border-radius: .5em;
+          width: 100%;
+
+          .location,
+          .date,
+          .guest {
+            width: 1.5em;
+            height: 1.5em;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          .location{
+            background-image: url('../../../assets/icon/location-pin-alt-1-svgrepo-com.svg');
+          }
+
+          .date{
+            background-image: url('../../../assets/icon/calendar-arrow-up-svgrepo-com.svg');
+          }
+          .guest{
+            background-image: url('../../../assets/icon/guest-user-person-svgrepo-com.svg');
+          }
+
+          input {
+            border: none;
+            background-color: transparent;
+            font-size: 1em;
+            outline: none;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .filter {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+
+      .filters,
+      .search-btn {
+        width: calc(92% /2);
+        display: flex;
+        align-items: center;
+        gap: 1em;
+      }
+
+      .filters .choix {
+        display: flex;
+        gap: .5em;
+        button{
+          padding: .2em .5em;
+          border-radius: 1em;
+          border: .1em solid;
+        }
+      }
+
+      .search-btn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+          padding: .4em;
+          border: .1em solid $font-1;
+          background-color: $font-1;
+          color: $font-2;
+          border-radius: .5em;
+          width: 5em;
+          gap: 1em;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
