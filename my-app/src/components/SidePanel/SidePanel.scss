@@ -1,5 +1,8 @@
+@import '../../App.scss';
+
+
 .side-panel {
-  background-color: aqua;
+  background-color: $prim-color;
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -122,6 +125,7 @@
   }
 
   .panel {
+    width: 100%;
     .login {
       display: flex;
       justify-content: space-evenly;
@@ -147,6 +151,18 @@
           &.whatsapp {
             background-image: url('../../assets/icon/whatsapp-svgrepo-com.svg');
           }
+
+          &:hover{
+            &~.name{
+              display: flex;
+            }
+          }
+        }
+
+        .name{
+          font-size: .8em;
+          font-weight: 500;
+          display: none;
         }
       }
 
