@@ -1,0 +1,122 @@
+.side-panel {
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1em;
+  padding: .5em;
+  width: auto;
+
+  .side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 1em;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: row;
+      gap: .5em;
+
+      .logo-image {
+        width: 2em;
+        height: auto;
+        aspect-ratio: 4/4;
+        background-image: url('../../assets/icon/booking-svgrepo-com.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .logo-titre {
+        font-size: 1.2em;
+        font-weight: 500;
+        color: #585858;
+      }
+    }
+
+    .user {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+      gap: .5em;
+
+      .profil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        gap: .5em;
+
+        .pdp {
+          width: 2em;
+          height: auto;
+          aspect-ratio: 4/4;
+          border-radius: 0.1em;
+          background-image: url('../../assets/icon/account-svgrepo-com.svg');
+          background-repeat: no-repeat;
+          background-size: cover;
+          padding: .1em;
+        }
+
+        .name {
+          font-size: .8em;
+          width: fit-content;
+          text-align: center;
+        }
+      }
+
+      .option {
+        .options {
+          display: flex;
+          align-items: center;
+          align-content: center;
+          flex-direction: row;
+          gap: .5em;
+          line-height: 2em;
+
+          .icon {
+            width: 1.5em;
+            height: 1.5em;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            &.account {
+              background-image: url('../../assets/icon/account-svgrepo-com.svg');
+            }
+
+            &.notification {
+              background-image: url('../../assets/icon/notification-13-svgrepo-com.svg');
+            }
+
+            &.calendar {
+              background-image: url('../../assets/icon/calendar-user-svgrepo-com.svg');
+            }
+
+            &.favorite {
+              background-image: url('../../assets/icon/favorite-chart-svgrepo-com.svg');
+            }
+
+            &.setting {
+              background-image: url('../../assets/icon/setting-3-svgrepo-com.svg');
+            }
+
+          }
+          .name{
+            font-size: .8em;
+          }
+        }
+      }
+    }
+  }
+}

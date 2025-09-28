@@ -293,24 +293,6 @@ app.post('/login', (req, res) => {
   });
 });
 
-// app.post('/userinfo', (req, res) => {
-//   const { id } = req.body;
-
-//   console.log(id)
-//   const sql = 'SELECT * FROM users WHERE id = ?';
-//   db.query(sql, [id], (err, results) => {
-
-//     if (results.length == 0) {
-//       return res.status(401).json({ message: 'User not found' });
-//     }
-//     if(err) console.log(err)
-//     else {
-//       const utilisateur = results[0];
-//       return res.status(200).json(results);
-//       // 
-//     }
-//   });
-// });
 
 app.get('/api/rooms', (req, res) => {
   const sql = 'select * from room;';
@@ -571,27 +553,7 @@ app.post("/api/bookingdates", async (req, res) => {
 app.post("/api/bookingdatesmodif", async (req, res) => {
   const { booking_id, dates } = req.body;
 
-  // booking_id: bookingId,
-  //     dates: [
-  //       {
-  //         date: dateKey,
-  //         start_time: dateHours.start,
-  //         end_time: dateHours.end,
-  //       },
-  //     ],
   console.log(room_id + "  " + roomdisposition_id + " " + user_id)
-  // const conn = await pool.getConnection();
-  // try {
-  // await conn.beginTransaction();
-
-  // 1) Créer le booking principal
-  // const [result] = await promise.execute("INSERT INTO booking (id_room, id_room_disposition, id_user) VALUES (?, ?, ?)",
-  //   [room_id, roomdisposition_id, user_id]
-  // );
-  // let uniqueId = result.insertId;
-
-  // console.log("oklahoma " + uniqueId)
-  // 2) Insérer les dates choisies
   for (const d of dates) {
     db.query(
       "UPDATE booking_dates set start_time = ? , end_time = ? WHERE id_booking = ?",
@@ -600,11 +562,6 @@ app.post("/api/bookingdatesmodif", async (req, res) => {
   }
   console.log('Finit ' + uniqueId)
   res.status(201).json({ message: "Réservation réussie", booking_id: uniqueId });
-  // } catch (err) {
-  //   // await conn.rollback();
-  //   console.error("Erreur réservation :", err);
-  //   res.status(500).json({ message: "Erreur lors de la réservation" });
-  // }
 });
 
 app.get("/api/users/:id/reservations", (req, res) => {
@@ -718,16 +675,6 @@ app.put("/api/modify/:id", async (req, res) => {
     }
 
   }
-  // try {
-  //   await db.query(
-  //     "UPDATE users SET full_name=?, email=?, phone=?, photo=? WHERE id=?",
-  //     [full_name, email, phone, photo, id]
-  //   );
-  //   const [rows] = await db.query("SELECT * FROM users WHERE id=?", [id]);
-  //   res.json(rows[0]);
-  // } catch (err) {
-  //   res.status(500).json({ error: "Erreur mise à jour utilisateur" });
-  // }
 });
 
 
@@ -751,10 +698,7 @@ app.get("/api/:bookingId/booking_dates", (req, res) => {
   }
 
 })
-// 
 
-
-// Modification des heures de reservations
 app.put("/api/bookinghours/:bookingId", async (req, res) => {
   const bookingId = req.params.bookingId;
   const { date, start_time, end_time } = req.body;
@@ -765,7 +709,7 @@ app.put("/api/bookinghours/:bookingId", async (req, res) => {
   }
 
   try {
-    // Vérifier si la réservation existe
+
     db.query(
       `SELECT * FROM booking_dates WHERE id_booking = ? `,
       [bookingId], (e, resu) => {
@@ -807,14 +751,6 @@ app.put("/api/bookinghours/:bookingId", async (req, res) => {
         );
       }
     );
-
-
-
-    // Vérifier si les nouvelles heures chevauchent une autre réservation sur la même salle
-
-
-
-    // Mise à jour des heures
 
   } catch (err) {
     console.error("Erreur update réservation:", err);
