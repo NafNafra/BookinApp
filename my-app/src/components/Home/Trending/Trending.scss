@@ -1,0 +1,85 @@
+@import '../../../App.scss';
+
+.Trending {
+  width: 95%;
+  margin: 0 auto;
+  padding: .5em;
+  padding-top: 2em;
+
+  .destination {
+    width: 100%;
+    margin: 1em 0;
+
+    .intro {
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+  }
+
+  .cartes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+
+    .carte {
+      width: calc(110%/5);
+
+      .lieux-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 7/5;
+        background-image: url('../../../assets/image/menu2.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: .5em;
+      }
+
+      .titre {
+        padding: .5em 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+
+        .description {
+          h3 {
+            margin: 0;
+            line-height: 1.2em;
+          }
+
+          &>div {
+            display: flex;
+            flex-direction: row;
+            gap: .5em;
+
+            .lieu-icon {
+              width: 1em;
+              height: 1em;
+              background-image: url('../../../assets/icon/hotel-1-svgrepo-com.svg');
+              background-position: center;
+              background-size: contain;
+            }
+
+
+            .reduc {
+              font-size: 1.5em;
+              font-weight: 500;
+            }
+
+            .normal {
+              font-size: 1em;
+              font-weight: 400;
+            }
+          }
+
+
+
+
+        }
+      }
+    }
+  }
+}
