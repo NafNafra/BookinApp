@@ -14,6 +14,8 @@ function App() {
         <li>100+ Project Done</li>
       </ul>
       <span><h3>Innovation</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>High Quality</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>Top Services</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>Best Product</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span>
+      <span><h3>Innovation</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>High Quality</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>Top Services</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>Best Product</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span>
+      <span><h3>Innovation</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>High Quality</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>Top Services</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span><span><h3>Best Product</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p></span>
     </>
   );
 }
