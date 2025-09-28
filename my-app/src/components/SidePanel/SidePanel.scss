@@ -1,38 +1,39 @@
 @import '../../App.scss';
 
 
-.side-panel {
-  background-color: $prim-color;
+.header {
+  background-color: $sec-color;
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   border-radius: 1em;
-  padding: 2em .5em;
+  padding: .5em 1em;
   width: auto;
+  position: sticky;
 
-  .side {
+  .part-1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
     align-content: center;
-    flex-direction: column;
-    gap: 1em;
+    flex-direction: row;
+    width: auto;
+    gap: 20%;
 
     .logo {
+      width: max-content;
       display: flex;
       justify-content: center;
       align-items: center;
       align-content: center;
       flex-direction: row;
-      gap: .5em;
+      gap: .2em;
 
       .logo-image {
         width: 2em;
         height: auto;
         aspect-ratio: 4/4;
-        background-image: url('../../assets/icon/booking-svgrepo-com.svg');
+        background-image: url('../../assets/icon/booking.svg');
         background-repeat: no-repeat;
         background-size: cover;
       }
@@ -40,16 +41,85 @@
       .logo-titre {
         font-size: 1.2em;
         font-weight: 500;
-        color: #585858;
+        color: $font-1;
       }
     }
+
+    .link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: row;
+      gap: 1em;
+      text-decoration: none;
+      color: $font-1;
+      font-weight: 450;
+    }
+  }
+
+  .part-2 {
+    width: auto;
+    padding: .2em;
+    background-color: $thi-color;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border: .1em solid $font-1;
+    border-radius: .5em;
+
+    input {
+      border: none;
+      background-color: transparent;
+      font-size: 1em;
+      outline: none;
+    }
+
+    .search {
+      width: 1.5em;
+      height: 1.5em;
+      background-image: url('../../assets/icon/search-alt-2-svgrepo-com.svg');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .part-3 {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+
+    width: auto;
+    gap: 1em;
+    font-size: 1em;
+
+    .signup{
+      padding: .4em;
+      border: .1em solid $font-1;
+      background-color: $font-1;
+      color: $font-2;
+      border-radius: .5em;
+    }
+  }
+
+  .side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 1em;
+
+    .logo {}
 
     .user {
       display: flex;
       justify-content: center;
       align-items: center;
       align-content: center;
-      flex-direction: column;
+      flex-direction: row;
       gap: .5em;
 
       .profil {
@@ -57,7 +127,7 @@
         justify-content: center;
         align-items: center;
         align-content: center;
-        flex-direction: column;
+        flex-direction: row;
         gap: .5em;
 
         .pdp {

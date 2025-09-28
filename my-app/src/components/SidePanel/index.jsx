@@ -35,60 +35,31 @@ const SidePanel = () => {
   }
 
   return (
-    <div className='side-panel'>
-      <div className="side">
-        <div className="logo">
-          <div className="logo-image"></div>
-          <div className="logo-titre">Bookavy</div>
+    <>
+      <div className="header">
+        <div className="part-1">
+          <div className="logo">
+            <div className="logo-image"></div>
+            <div className="logo-titre">Bookavy</div>
+          </div>
+          <div className='link'>
+            <div className="li">Hotel</div>
+            <div className="li">Meeting</div>
+            <div className="li">Ball</div>
+            <div className="li">Room</div>
+          </div>
         </div>
 
-        <div className="user">
-          <div className="profil">
-            <div className="pdp"></div>
-            <div className="name">Dean Winchester</div>
-          </div>
-          <div className="option">
-            <div className="options">
-              <div className="icon account"></div>
-              <div className="name">Account</div>
-            </div>
-            <div className="options">
-              <div className="icon notification"></div>
-              <div className="name">Notifications</div>
-            </div>
-            <div className="options">
-              <div className="icon calendar"></div>
-              <div className="name">My orders</div>
-            </div>
-            <div className="options">
-              <div className="icon favorite"></div>
-              <div className="name">Favorites</div>
-            </div>
-            <div className="options">
-              <div className="icon setting"></div>
-              <div className="name">Settings</div>
-            </div>
-          </div>
+        <div className="part-2">
+          <input type="text" />
+          <div className="search"></div>
         </div>
-      </div>
-      <div className="panel">
-        <div className='login'>
-          <div className="contact">
-            <div className="icon facebook"></div>
-            <div className="name">Facebook</div>
-          </div>
-          <div className="contact">
-            <div className="icon instagram"></div>
-            <div className="name">Instagram</div>
-          </div>
-          <div className="contact">
-            <div className="icon whatsapp"></div>
-            <div className="name">Whatsapp</div>
-          </div>
 
-          {/* <a href='/register'><img src={logIn} alt='Logout' style={{ width: '40px', height: '40px', borderRadius: '50%' }} /><b>Signin</b></a>
-          <a href='/login'><img src={register} alt='Logout' style={{ width: '40px', height: '40px', borderRadius: '50%' }} /><b>Login</b></a> */}
+        <div className="part-3">
+          <div className="login">Log In</div>
+          <div className="signup">Sign Up</div>
         </div>
+
       </div>
 
 
@@ -120,8 +91,7 @@ const SidePanel = () => {
         </span>
       </div> */}
 
-    </div>
-
+    </>
   )
 
 }

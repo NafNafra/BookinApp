@@ -5,8 +5,7 @@ import SidePanel from '../SidePanel';
 export default function Layout() {
   return (
       <div className="layout">
-
-        {/* <SidePanel /> */}
+        <SidePanel />
         <div>
           <Outlet />
         </div>
