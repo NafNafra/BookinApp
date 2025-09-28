@@ -8,3 +8,35 @@ $six-color: #F2B2FF;
 $font-1: #494949;
 $font-2: #fff;
 $font-3: rgba(209, 208, 208, 0.3);
+
+
+
+@keyframes bgCycle {
+  0% {
+    background-image: url("./assets/image/menu1.jpg");
+  }
+
+  16% {
+    background-image: url("./assets/image/menu2.webp");
+  }
+
+  33% {
+    background-image: url("./assets/image/menu3.jpg");
+  }
+
+  50% {
+    background-image: url("./assets/image/menu4.jpg");
+  }
+
+  66% {
+    background-image: url("./assets/image/menu4.webp");
+  }
+
+  83% {
+    background-image: url("./assets/image/menu5.jpg");
+  }
+
+  100% {
+    background-image: url("./assets/image/menu6.jpg");
+  }
+}

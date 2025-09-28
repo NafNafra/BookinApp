@@ -7,7 +7,7 @@ import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
 // import './style/style.css';
 import Layout from './components/Layout';
 import Register from './components/register'
-import Menu from './components/menu'
+import Home from './components/Home'
 import Login from './components/login'
 import Person from './shortcut/person'
 import Prospectus from './components/prospectus'
@@ -32,7 +32,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Layout />}>
-              <Route index element={<Menu />} />
+              <Route index element={<Home />} />
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
               <Route path='/person' element={<Person />} />

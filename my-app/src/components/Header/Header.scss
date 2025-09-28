@@ -3,26 +3,26 @@
 
 .header {
   background-color: $font-3;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(1em);
+  -webkit-backdrop-filter: blur(1em);
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
   flex-direction: row;
-  border-radius: 1em;
+  flex-wrap: wrap;
+  border-radius: .5em;
   padding: .5em 1em;
-  width: auto;
-  position: sticky;
-  top: .5em;
+  width: 95%;
+  position: fixed;
+  top: 1em;
 
   &::before {
     content: "";
-    position: absolute;
+    position: fixed;
     inset: 0;
     background: inherit;
-    /* same background as body */
-    filter: blur(8px);
+    filter: blur(5em);
     z-index: -1;
   }
 
@@ -103,12 +103,12 @@
     align-items: center;
     align-content: center;
     flex-direction: row;
-
-    width: auto;
     gap: 1em;
     font-size: 1em;
 
     .signup {
+      width: 5em;
+      text-align: center;
       padding: .4em;
       border: .1em solid $font-1;
       background-color: $font-1;
@@ -117,139 +117,139 @@
     }
   }
 
-  .side {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-direction: row;
-    gap: 1em;
+  // .side {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   align-content: center;
+  //   flex-direction: row;
+  //   gap: 1em;
 
-    .logo {}
+  //   .logo {}
 
-    .user {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-      flex-direction: row;
-      gap: .5em;
+  //   .user {
+  //     display: flex;
+  //     justify-content: center;
+  //     align-items: center;
+  //     align-content: center;
+  //     flex-direction: row;
+  //     gap: .5em;
 
-      .profil {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        flex-direction: row;
-        gap: .5em;
+  //     .profil {
+  //       display: flex;
+  //       justify-content: center;
+  //       align-items: center;
+  //       align-content: center;
+  //       flex-direction: row;
+  //       gap: .5em;
 
-        .pdp {
-          width: 2em;
-          height: auto;
-          aspect-ratio: 4/4;
-          border-radius: 0.1em;
-          background-image: url('../../assets/icon/account-svgrepo-com.svg');
-          background-repeat: no-repeat;
-          background-size: cover;
-          padding: .1em;
-        }
+  //       .pdp {
+  //         width: 2em;
+  //         height: auto;
+  //         aspect-ratio: 4/4;
+  //         border-radius: 0.1em;
+  //         background-image: url('../../assets/icon/account-svgrepo-com.svg');
+  //         background-repeat: no-repeat;
+  //         background-size: cover;
+  //         padding: .1em;
+  //       }
 
-        .name {
-          font-size: .8em;
-          width: fit-content;
-          text-align: center;
-        }
-      }
+  //       .name {
+  //         font-size: .8em;
+  //         width: fit-content;
+  //         text-align: center;
+  //       }
+  //     }
 
-      .option {
-        .options {
-          display: flex;
-          align-items: center;
-          align-content: center;
-          flex-direction: row;
-          gap: .5em;
-          line-height: 2em;
+  //     .option {
+  //       .options {
+  //         display: flex;
+  //         align-items: center;
+  //         align-content: center;
+  //         flex-direction: row;
+  //         gap: .5em;
+  //         line-height: 2em;
 
-          .icon {
-            width: 1.5em;
-            height: 1.5em;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
+  //         .icon {
+  //           width: 1.5em;
+  //           height: 1.5em;
+  //           background-repeat: no-repeat;
+  //           background-position: center;
+  //           background-size: contain;
 
-            &.account {
-              background-image: url('../../assets/icon/account-svgrepo-com.svg');
-            }
+  //           &.account {
+  //             background-image: url('../../assets/icon/account-svgrepo-com.svg');
+  //           }
 
-            &.notification {
-              background-image: url('../../assets/icon/notification-13-svgrepo-com.svg');
-            }
+  //           &.notification {
+  //             background-image: url('../../assets/icon/notification-13-svgrepo-com.svg');
+  //           }
 
-            &.calendar {
-              background-image: url('../../assets/icon/calendar-user-svgrepo-com.svg');
-            }
+  //           &.calendar {
+  //             background-image: url('../../assets/icon/calendar-user-svgrepo-com.svg');
+  //           }
 
-            &.favorite {
-              background-image: url('../../assets/icon/favorite-chart-svgrepo-com.svg');
-            }
+  //           &.favorite {
+  //             background-image: url('../../assets/icon/favorite-chart-svgrepo-com.svg');
+  //           }
 
-            &.setting {
-              background-image: url('../../assets/icon/setting-3-svgrepo-com.svg');
-            }
+  //           &.setting {
+  //             background-image: url('../../assets/icon/setting-3-svgrepo-com.svg');
+  //           }
 
-          }
+  //         }
 
-          .name {
-            font-size: .8em;
-          }
-        }
-      }
-    }
-  }
+  //         .name {
+  //           font-size: .8em;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
-  .panel {
-    width: 100%;
+  // .panel {
+  //   width: 100%;
 
-    .login {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      align-content: center;
+  //   .login {
+  //     display: flex;
+  //     justify-content: space-evenly;
+  //     align-items: center;
+  //     align-content: center;
 
-      .contact {
-        .icon {
-          width: 1.5em;
-          height: 1.5em;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: contain;
+  //     .contact {
+  //       .icon {
+  //         width: 1.5em;
+  //         height: 1.5em;
+  //         background-repeat: no-repeat;
+  //         background-position: center;
+  //         background-size: contain;
 
-          &.facebook {
-            background-image: url('../../assets/icon/facebook-svgrepo-com.svg');
-          }
+  //         &.facebook {
+  //           background-image: url('../../assets/icon/facebook-svgrepo-com.svg');
+  //         }
 
-          &.instagram {
-            background-image: url('../../assets/icon/instagram-svgrepo-com.svg');
-          }
+  //         &.instagram {
+  //           background-image: url('../../assets/icon/instagram-svgrepo-com.svg');
+  //         }
 
-          &.whatsapp {
-            background-image: url('../../assets/icon/whatsapp-svgrepo-com.svg');
-          }
+  //         &.whatsapp {
+  //           background-image: url('../../assets/icon/whatsapp-svgrepo-com.svg');
+  //         }
 
-          &:hover {
-            &~.name {
-              display: flex;
-            }
-          }
-        }
+  //         &:hover {
+  //           &~.name {
+  //             display: flex;
+  //           }
+  //         }
+  //       }
 
-        .name {
-          font-size: .8em;
-          font-weight: 500;
-          display: none;
-        }
-      }
+  //       .name {
+  //         font-size: .8em;
+  //         font-weight: 500;
+  //         display: none;
+  //       }
+  //     }
 
-    }
-  }
+  //   }
+  // }
 }
