@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
-import '../App.css'
 
 import verify from '../style/verify.png'
 import bookit from '../style/bookit.png'

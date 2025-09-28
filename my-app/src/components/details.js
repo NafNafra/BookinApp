@@ -1,4 +1,4 @@
-import '../App.css';
+import '../App.scss';
 import React, { useEffect, useState } from "react";
 import imaged from '../style/njz.jpeg'
 import Btn from '../shortcut/button'

@@ -1,6 +1,6 @@
 
 // import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import React from "react";
 import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
 

@@ -1,6 +1,5 @@
 import Carte from '../shortcut/room_carte'
 import axios from 'axios'
-import '../App.css'
 import React, { useEffect, useState } from 'react'
 import Next from '../shortcut/next'
 import imaged from '../style/njz.jpeg'

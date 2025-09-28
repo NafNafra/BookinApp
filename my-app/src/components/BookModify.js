@@ -1,4 +1,4 @@
-import '../App.css';
+import '../App.scss';
 import React, { useState, useEffect, useContext, useCallback } from "react";
 import { data, useParams, useNavigate } from 'react-router-dom';
 import imaged from '../style/njz.jpeg'
@@ -144,24 +144,6 @@ function Booking_page() {
   };
 
 
-  // function appel(callback) {
-
-  //   fetch('http://localhost:5000/api/' + idRoom + '/roomdispo') // to get room_disposition.id_room
-  //     .then(res => res.json())
-  //     .then((data1) => {
-  //       // const [anne] = [data1[0].id, data1[0].id_room, data1[0].id_disposition, data1[0].capacity, data1[0].price]
-  //       callback(data1[0].id_room)
-  //     })
-  // }
-
-  // function appel1(callback1) {
-  //   fetch('http://localhost:5000/api/' + id_bp + '/roomdispo') // to get room_disposition.id_disposition
-  //     .then(res => res.json())
-  //     .then((data1) => {
-  //       // const [anne] = [data1[0].id, data1[0].id_room, data1[0].id_disposition, data1[0].capacity, data1[0].price]
-  //       callback1(data1[0].id_disposition)
-  //     })
-  // }
 
   let today = null
 

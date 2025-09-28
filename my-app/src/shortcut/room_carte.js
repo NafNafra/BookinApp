@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import '../App.css'
 import tofav from '../style/tofav.png'
 
 import axios from 'axios';

@@ -1,4 +1,4 @@
-import '../App.css';
+import '../App.scss';
 import React, { useState, useEffect, useContext, useCallback } from "react";
 import { data, useParams, useNavigate } from 'react-router-dom';
 import imaged from '../style/njz.jpeg'

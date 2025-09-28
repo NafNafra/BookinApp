@@ -1,4 +1,3 @@
-import '../App.css';
 import React, { useState } from "react";
 import { useParams, useNavigate } from 'react-router-dom';
 import email from '../style/email.png'

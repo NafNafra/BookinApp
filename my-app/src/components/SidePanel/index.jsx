@@ -73,13 +73,17 @@ const SidePanel = () => {
       </div>
       <div className="panel">
         <div className='login'>
-          <div className="facebook">
-            <div className="icon"></div>
-            <div className="name"></div>
+          <div className="contact">
+            <div className="icon facebook"></div>
+            <div className="name">Facebook</div>
           </div>
-          <div className="instagram">
-            <div className="icon"></div>
-            <div className="name"></div>
+          <div className="contact">
+            <div className="icon instagram"></div>
+            <div className="name">Instagram</div>
+          </div>
+          <div className="contact">
+            <div className="icon whatsapp"></div>
+            <div className="name">Whatsapp</div>
           </div>
 
           {/* <a href='/register'><img src={logIn} alt='Logout' style={{ width: '40px', height: '40px', borderRadius: '50%' }} /><b>Signin</b></a>
