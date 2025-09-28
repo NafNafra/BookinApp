@@ -6,6 +6,16 @@ const Trending = () => {
       <div className="destination">
         <div className="intro">Top hotels en trend pour les activites festives et professionnels</div>
         <div className="texte">Reserver dans les hotels mondialements connus pour leurs organisations des evenements en tout genres et de la gestion de vos reunions</div>
+        <div className="choix">
+          <div>
+            <button>Antananarivo</button>
+            <button>Antsirabe</button>
+            <button>Toamasina</button>
+            <button>Mahajanga</button>
+          </div>
+          <div className="voir"><div>Voir tout</div><div className="voir-tout" /></div>
+
+        </div>
       </div>
       <div className="cartes">
         <div className="carte">
@@ -26,7 +36,7 @@ const Trending = () => {
             </div>
           </div>
         </div>
-<div className="carte">
+        <div className="carte">
           <div className="lieux-image"></div>
           <div className="titre">
             <div className='description'>

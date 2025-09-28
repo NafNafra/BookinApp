@@ -14,6 +14,44 @@
       font-size: 1.5em;
       font-weight: 500;
     }
+
+    .choix {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        padding: .5em 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        gap: .5em;
+
+        button {
+          padding: .2em .5em;
+          border-radius: 1em;
+          border: .1em solid;
+        }
+
+        &.voir {
+          padding: .2em .5em;
+          border-radius: .5em;
+          border: .1em solid $font-1;
+
+          .voir-tout {
+            width: 1em;
+            height: 1em;
+            background-image: url('../../../assets/icon/arrow-sm-right-svgrepo-com.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+
+      }
+
+
+    }
   }
 
   .cartes {
@@ -48,6 +86,7 @@
           display: flex;
           flex-direction: column;
           gap: .5em;
+
           div {
 
             h3 {
