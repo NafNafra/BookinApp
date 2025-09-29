@@ -3,6 +3,7 @@ import Intro from './Intro';
 import Presentation from './Presentation';
 import Trending from './Trending';
 import MostVisited from './MostVisited';
+import Promo from './Promo';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Presentation/>
       <Trending/>
       <MostVisited/>
+      <Promo/>
     </div>
   );
 }
