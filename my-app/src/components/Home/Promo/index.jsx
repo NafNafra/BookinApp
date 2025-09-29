@@ -11,8 +11,10 @@ const Promo = () => {
         <div className="carte">
           <div className="info">
             <div className="rank"></div>
-            <div className="part-1">Gagnez des reductions extras pour la location dans l'hotel Azure</div>
-            <div className="part-2">50 %</div>
+            <div>
+              <div className="part-1">Gagnez des reductions extras pour la location dans l'hotel Azure</div>
+              <div className="part-2">50 %</div>
+            </div>
             <div className="part-3">avec termes et conditions</div>
           </div>
           <div className="duree"> Valide du 14 au 20 Octobre 2025</div>
@@ -21,8 +23,11 @@ const Promo = () => {
         <div className='carte'>
           <div className="info">
             <div className="rank"></div>
-            <div className="part-1">Gagnez des reductions extras pour la location dans l'hotel Azure</div>
-            <div className="part-2">50 %</div>
+            <div>
+              <div className="part-1">Gagnez des reductions extras pour la location dans l'hotel Azure</div>
+              <div className="part-2">50 %</div>
+
+            </div>
             <div className="part-3">avec termes et conditions</div>
           </div>
           <div className="duree"> Valide du 14 au 20 Octobre 2025</div>

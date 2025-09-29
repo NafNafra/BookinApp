@@ -42,6 +42,7 @@
     justify-content: space-between;
     align-items: center;
     align-content: center;
+    color: $font-2;
 
     .carte {
       width: 46%;
@@ -58,6 +59,47 @@
       flex-direction: row;
 
       padding: 1em;
+
+      .duree {
+        background-color: $font-3;
+        backdrop-filter: blur(1em);
+        -webkit-backdrop-filter: blur(1em);
+        height: fit-content;
+        padding: .5em;
+        border-radius: 5em;
+      }
+
+      .info {
+        width: 45%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+
+        .rank {
+          margin: .5em;
+          width: 2em;
+          height: 2em;
+          background-image: url('../../../assets/icon/quality-svgrepo-com.svg');
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        .part-1 {
+          font-size: 1.2em;
+          font-weight: 500;
+        }
+
+        .part-2 {
+          font-size: 2.2em;
+          font-weight: 500;
+        }
+
+        .part-3 {
+          font-size: .8em;
+          font-weight: 500;
+        }
+      }
 
       .titre {
         padding: .5em 0;
