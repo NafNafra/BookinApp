@@ -1,13 +1,8 @@
-
-// import logo from './logo.svg';
 import './App.scss';
-import React from "react";
-import { BrowserRouter, Router, Route, Routes } from "react-router-dom";
-
-// import './style/style.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from './components/Layout';
 import Register from './components/register'
-import Home from './components/Home'
+import Home from './pages/Home'
 import Login from './components/login'
 import Person from './shortcut/person'
 import Prospectus from './components/prospectus'
@@ -27,34 +22,32 @@ import Account from './components/Account'
 
 function App() {
   return (
-    <>
-      <AuthProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/register' element={<Register />} />
-              <Route path='/person' element={<Person />} />
-              <Route path='/carte' element={<Prospectus />} />
-              <Route path='/booking/:room_id' element={<BookingPage />} />
-              <Route path='/bookit/:id_bp' element={<Booking_page/>}/>
-              <Route path='/calendar' element={<Calendar />} />
-              <Route path='/details/:room_id' element={<Details />} />
-              <Route path='/mycalendar' element={<ReactCalendar />} />
-              <Route path='/s' element={<Next />} />
-              <Route path='/room' element={<Room />} />
-              <Route path='/favorites' element={<Favorites/>}/>
-              <Route path='/myreservations' element={<MyReservations/>}/>
-              <Route path='/bookingdetail' element={<BookDetail/>}/>
-              <Route path='/bookingmodify' element={<BookModify/>}/>
-              <Route path='/accountdetail' element={<Account/>}/>
-              
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      </AuthProvider>
-    </>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/person' element={<Person />} />
+            <Route path='/carte' element={<Prospectus />} />
+            <Route path='/booking/:room_id' element={<BookingPage />} />
+            <Route path='/bookit/:id_bp' element={<Booking_page />} />
+            <Route path='/calendar' element={<Calendar />} />
+            <Route path='/details/:room_id' element={<Details />} />
+            <Route path='/mycalendar' element={<ReactCalendar />} />
+            <Route path='/s' element={<Next />} />
+            <Route path='/room' element={<Room />} />
+            <Route path='/favorites' element={<Favorites />} />
+            <Route path='/myreservations' element={<MyReservations />} />
+            <Route path='/bookingdetail' element={<BookDetail />} />
+            <Route path='/bookingmodify' element={<BookModify />} />
+            <Route path='/accountdetail' element={<Account />} />
+
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
