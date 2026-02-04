@@ -3,7 +3,7 @@ import tofav from '../style/tofav.png'
 
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-function RoomCarte({ data }) {
+const RoomCarte = ({ data }) => {
   const [rooms, setRooms] = useState([])
 
   useEffect(() => {
