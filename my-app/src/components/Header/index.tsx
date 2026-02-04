@@ -3,15 +3,11 @@ import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import { useState } from 'react';
 import { AuthContext } from '../../service/AuthContext';
 import { useContext } from 'react';
-
-
-
+import logo from '../../assets/icon/booking.svg';
 const SidePanel = () => {
   const { utilisateur, logout } = useContext(AuthContext);
-
   const [showAccount, setShowAccount] = useState(true)
   const navigate = useNavigate();
-
   const handleToReservation = () => {
     localStorage.setItem("idUser", utilisateur.id)
     console.log(localStorage.getItem("idUser"))
@@ -28,12 +24,10 @@ const SidePanel = () => {
     setShowAccount(prev => !prev)
   }
 
-  return (
-    <>
-      <div className="header">
+  return <div className="header">
         <div className="part-1">
           <div className="logo">
-            <div className="logo-image"></div>
+            <img className="logo-image" src={logo} alt="Bookavy" />
             <div className="logo-titre">Bookavy</div>
           </div>
           <div className='link'>
@@ -54,8 +48,6 @@ const SidePanel = () => {
           <div className="signup">Sign Up</div>
         </div>
       </div>
-    </>
-  )
 
 }
 

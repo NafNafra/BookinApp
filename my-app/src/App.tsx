@@ -37,7 +37,7 @@ function App() {
             <Route path='/details/:room_id' element={<Details />} />
             <Route path='/mycalendar' element={<ReactCalendar />} />
             <Route path='/s' element={<Next />} />
-            <Route path='/room' element={<Room />} />
+            {/* <Route path='/room' element={<Room />} /> */}
             <Route path='/favorites' element={<Favorites />} />
             <Route path='/myreservations' element={<MyReservations />} />
             <Route path='/bookingdetail' element={<BookDetail />} />
